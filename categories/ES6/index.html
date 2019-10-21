@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-<title>标签 - Junsheng Liu</title>
+<title>分类: ES6 - Junsheng Liu</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
@@ -40,10 +40,10 @@
 
 
     <meta name="description" content="嗨，我是Junsheng Liu，一名前端开发者（后端learning）">
-<meta name="keywords" content="ES6,Git,JavaScript">
+<meta name="keywords" content="junsheng.liu">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Junsheng Liu">
-<meta property="og:url" content="https:&#x2F;&#x2F;qyjs.github.io&#x2F;tags&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;qyjs.github.io&#x2F;categories&#x2F;ES6&#x2F;index.html">
 <meta property="og:site_name" content="Junsheng Liu">
 <meta property="og:description" content="嗨，我是Junsheng Liu，一名前端开发者（后端learning）">
 <meta property="og:locale" content="zh-CN">
@@ -132,7 +132,7 @@
                 <a class="navbar-item"
                 href="/categories">分类</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/tags">标签</a>
                 
                 <a class="navbar-item"
@@ -170,39 +170,106 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                标签
-            </h3>
-            <div class="field is-grouped is-grouped-multiline">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">分类</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">ES6</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-21T11:12:33.163Z">2019-10-21</time>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/ES6/">
-                        <span class="tag">ES6</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/ES6/">ES6</a>
                 </div>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/Git/">
-                        <span class="tag">Git</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
                 
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/JavaScript/">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 分钟 读完 (大约 987 个字)
+                </span>
                 
             </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/10/21/ES6-Let-%E5%92%8CConst/">ES6 Let 和 Const</a>
+            
+        </h1>
+        <div class="content">
+            <p>在JS中用var声明变量存在变量提升，比如：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> (<span class="hljs-literal">false</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(a);<span class="hljs-comment">//undefined</span></span><br></pre></td></tr></table></figure>
+<p>这段代码输出的是undefined，而不是ReferenceError。这是因为var有变量提升，实际这段代码相当于：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> a;</span><br><span class="line"><span class="hljs-keyword">if</span> (<span class="hljs-literal">false</span>) &#123;</span><br><span class="line">    a = <span class="hljs-number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(a);<span class="hljs-comment">//undefined</span></span><br></pre></td></tr></table></figure>
+<p>还有在for循环中：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> result = [];</span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;</span><br><span class="line">    result.push(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(i) &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">0</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">1</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">2</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">3</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">4</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(i);<span class="hljs-comment">//5</span></span><br></pre></td></tr></table></figure>
+<p>数组里输出的值都是5，并且for循环结束了，还是可以访问i的值。在ES6之前，是没有块级作用域，在ES6中引入了块级作用域，块级作用域是指：</p>
+<ul>
+<li>函数内部</li>
+<li>块中(字符 { 和 } 之间的区域)</li>
+</ul>
+<h2 id="let-和-const"><a href="#let-和-const" class="headerlink" title="let 和 const"></a>let 和 const</h2><p>let和const是用来声明块级作用域变量，它们有以下特性：</p>
+<h3 id="1-不会被提升"><a href="#1-不会被提升" class="headerlink" title="1. 不会被提升"></a>1. 不会被提升</h3><figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> (<span class="hljs-literal">false</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(a);<span class="hljs-comment">//Uncaught ReferenceError: a is not defined</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-重复声明会报错"><a href="#2-重复声明会报错" class="headerlink" title="2. 重复声明会报错"></a>2. 重复声明会报错</h3><figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> a = <span class="hljs-number">2</span>; <span class="hljs-comment">//Uncaught SyntaxError: Identifier 'a' has already been declared</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-不绑定全局作用域"><a href="#3-不绑定全局作用域" class="headerlink" title="3. 不绑定全局作用域"></a>3. 不绑定全局作用域</h3><p>在全局作用就里使用var声明变量，这个变量会作为全局对象的属性。</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.a);<span class="hljs-comment">//1</span></span><br></pre></td></tr></table></figure>
+<p>但是用let和const不会：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-keyword">const</span> b = <span class="hljs-number">2</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.a);<span class="hljs-comment">//undefined</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.b);<span class="hljs-comment">//undefined</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="let和const的区别"><a href="#let和const的区别" class="headerlink" title="let和const的区别"></a>let和const的区别</h3><p>const用来声明常量，一旦初始化，就不能再被修改，否则会报错。<br>但是对于const声明的对象，对象的引用不能被修改，但是对象里的属性值是可以被修改的：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> data = &#123;</span><br><span class="line">    a: <span class="hljs-number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data.a = <span class="hljs-number">2</span>;<span class="hljs-comment">//可以被修改</span></span><br><span class="line">data.b = <span class="hljs-number">3</span>;<span class="hljs-comment">//会加一个属性b</span></span><br><span class="line"></span><br><span class="line">data = &#123;&#125;;<span class="hljs-comment">//报错：Uncaught TypeError: Assignment to constant variable</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="暂时性死区-Temporal-Dead-Zone"><a href="#暂时性死区-Temporal-Dead-Zone" class="headerlink" title="暂时性死区(Temporal Dead Zone)"></a>暂时性死区(Temporal Dead Zone)</h3><p>let和const什么的变量不会被提升到作用域顶部，如果在声明之前访问这些变量，会报错：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log(a);<span class="hljs-comment">//Uncaught ReferenceError: Cannot access 'a' before initialization</span></span><br><span class="line"><span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>在JS引擎扫描代码发现变量声明时，遇到var声明就提升到作用域顶部，遇到let和const就把这些声明放在暂时性死区。对于let和const变量，如果在执行它们的声明语句之前访问会报错，只有执行完声明语句之后才会从暂时性死区移出。</p>
+<h3 id="循环中的块级作用域"><a href="#循环中的块级作用域" class="headerlink" title="循环中的块级作用域"></a>循环中的块级作用域</h3><p>之前有代码：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> result = [];</span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;</span><br><span class="line">    result.push(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(i) &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">0</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">1</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">2</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">3</span>]());<span class="hljs-comment">//5</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">4</span>]());<span class="hljs-comment">//5</span></span><br></pre></td></tr></table></figure>
+<p>我们实际想要的输出0 1 2 3 4，解决方案有：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> result = []</span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;</span><br><span class="line">    result.push((<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">i</span>) </span>&#123; <span class="hljs-built_in">console</span>.log(i) &#125;)(i));</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">0</span>]());<span class="hljs-comment">//0</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">1</span>]());<span class="hljs-comment">//1</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">2</span>]());<span class="hljs-comment">//2</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">3</span>]());<span class="hljs-comment">//3</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">4</span>]());<span class="hljs-comment">//4</span></span><br></pre></td></tr></table></figure>
+<p>还可以用ES6中的let：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> result = []</span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;</span><br><span class="line">    result.push(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(i) &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">0</span>]());<span class="hljs-comment">//0</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">1</span>]());<span class="hljs-comment">//1</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">2</span>]());<span class="hljs-comment">//2</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">3</span>]());<span class="hljs-comment">//3</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(result[<span class="hljs-number">4</span>]());<span class="hljs-comment">//4</span></span><br></pre></td></tr></table></figure>
+<p>之前说过，let不提升，不能重复定义，在第二次循环的时候，又用let声明了i，为什么在这里不报错，可以正确输出值呢？<br>比如：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) &#123;</span><br><span class="line">  <span class="hljs-keyword">let</span> i = <span class="hljs-string">'abc'</span>;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里会输出三个abc，但是用var：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) &#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> i = <span class="hljs-string">'abc'</span>;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只会输出一个abc。</p>
+<p>JS引擎对var和let使用了不同的方式处理，对于let每次循环都会创建一个新变量，对于代码：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> result = []</span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;</span><br><span class="line">    result.push(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(i) &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际相当于：</p>
+<figure class="highlight js hljs"><table><tr><td class="code"><pre><span class="line">(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>) &#123;</span><br><span class="line">    result[<span class="hljs-number">0</span>]= <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(<span class="hljs-number">0</span>) &#125;;</span><br><span class="line">&#125;</span><br><span class="line">(<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>) &#123;</span><br><span class="line">    result[<span class="hljs-number">1</span>]= <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>) &#125;;</span><br><span class="line">&#125;</span><br><span class="line">(<span class="hljs-keyword">let</span> i = <span class="hljs-number">2</span>) &#123;</span><br><span class="line">    result[<span class="hljs-number">2</span>]= <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>) &#125;;</span><br><span class="line">&#125;</span><br><span class="line">......</span><br><span class="line">......</span><br><span class="line">(<span class="hljs-keyword">let</span> i = <span class="hljs-number">4</span>) &#123;</span><br><span class="line">    result[<span class="hljs-number">4</span>]= <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123; <span class="hljs-built_in">console</span>.log(<span class="hljs-number">4</span>) &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但是在上面代码里不能用const，虽然我们每次创建了一个新的变量，但是我们尝试修改const的值，所以会报错。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在开发过程中，默认推荐使用const，只有当确定变量的值会发生改变使用let。</p>
+
+        </div>
+        
+        
+
+        
     </div>
-</div></div>
+</div>
+
+
+
+
+
+
+
+
+</div>
                 
 
 
