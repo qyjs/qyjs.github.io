@@ -1,6 +1,6 @@
 ---
 title: 深入理解javascript-this
-tags: html
+tags: javascript
 ---
 22
 
