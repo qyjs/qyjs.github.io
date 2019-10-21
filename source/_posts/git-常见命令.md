@@ -2,6 +2,8 @@
 title: git 常见命令
 date: 2019-09-21 15:28:18
 tags: Git
+categories: Git
+thumbnail: ""
 ---
 
 

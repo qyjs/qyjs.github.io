@@ -2,6 +2,8 @@
 title: JS：深入理解JavaScript-this
 tags: JavaScript
 layout: post
+categories: JavaScript
+thumbnail: ""
 ---
 
 在上一篇文章【[JS：深入理解JavaScript-执行上下文](https://limeii.github.io/2019/05/js-execution-context/)】中介绍了执行上下文是如何工作的。在这篇文章里会介绍执行上下文中的ThisBinding，也就是JavaScript中的this。

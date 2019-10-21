@@ -2,6 +2,8 @@
 title: ES6 Let 和 Const
 tags: ES6
 layout: post
+categories: ES6
+thumbnail: ""
 ---
 
 在JS中用var声明变量存在变量提升，比如：
