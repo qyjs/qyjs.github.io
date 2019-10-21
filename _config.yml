@@ -3,17 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
+title: Junsheng Liu
+subtitle: 个人技术博客
+welcome_message: 主要是记录个人对技术的理解和开发过程中遇到的问题，欢迎了解更多
+description: 嗨，我是Junsheng Liu，一名前端开发者（后端learning）
 keywords:
-author: John Doe
+author: junsheng.liu
 language: en
-timezone:
+timezone: China
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://qyjs.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -89,4 +90,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: https://github.com/qyjs/qyjs.github.io.git
+  branch: master
